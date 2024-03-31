@@ -1,0 +1,110 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+    Create Form
+</mat-toolbar>
+  
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+    alt="avatarimg"
+      class="avatar mat-elevation-z8"
+      src="assets/avathor.png"
+    />
+
+    <p class="designation" style="font-size:25px; color: white; margin-top: 10px;">Welcome</p>
+    <h5 class="name">{{Email}}</h5>
+  
+    <mat-divider></mat-divider>
+        
+    <button mat-button class="menu-button" routerLink="/Dashboard"  >
+      <mat-icon>analytics</mat-icon>
+      <span>Analytics</span>
+    </button>
+
+    <button mat-button class="menu-button" >
+      <mat-icon>create</mat-icon>
+      <span>create</span>
+    </button>
+     
+    <button mat-button class="menu-button" routerLink="/read" >
+      <mat-icon>book</mat-icon>
+      <span>Read</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/printpage" (click)="printx()">
+      <mat-icon>print</mat-icon>
+      <span>Print</span>
+    </button>
+  
+    <mat-divider></mat-divider>
+  
+    <button mat-button class="menu-button" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Log out</span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8" >
+     
+
+      <section id="create" class="getform">
+        <mat-card style="justify-content: center; width: 32%;">
+        <mat-card-title align="center" style="padding: 10px;">Create Payee
+          </mat-card-title>
+          <mat-card-content >
+            <form align="center" [formGroup]="employeeFormGroup">
+              <mat-form-field  style="width: 40%">
+                <input matInput placeholder="Name" formControlName="employee_name" type="text">
+              
+              </mat-form-field> &nbsp;
+        
+              <mat-form-field   style="width: 40%" >
+                <input matInput placeholder="Phone" formControlName="phone" type="number"> 
+              </mat-form-field> <br/>
+
+              <mat-form-field   style="width: 82%">
+                <input matInput placeholder="Address" formControlName="address" type="text">
+              </mat-form-field><br/>
+
+              <mat-form-field   style="width: 40%">
+              <input matInput  [matDatepicker]="pickers" placeholder="Provide Date" formControlName="date">
+              <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+              <mat-datepicker #pickers></mat-datepicker>
+              </mat-form-field> &nbsp;
+        
+              <mat-form-field   style="width: 40%">
+                <input matInput placeholder="Due Month" formControlName="duedate" type="number" >               
+                </mat-form-field><br/>
+
+              <mat-form-field   style="width: 40%">
+                <input matInput placeholder="Amount" formControlName="amount" type="number">
+              </mat-form-field> &nbsp;
+
+              <mat-form-field    style="width: 40%">
+                <input matInput placeholder="interest" formControlName="interest" type="number">                
+              </mat-form-field><br/>
+             
+
+              <button mat-raised-button color="primary" (click)="calculate(); saveAction()">               
+                Save 
+              </button> &nbsp;
+              <button mat-raised-button color="warn" (click)="resetAction()">               
+                Reset
+              </button>
+
+            </form>
+          </mat-card-content>
+        </mat-card>
+        
+      </section>
+       
+     
+         
+     
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

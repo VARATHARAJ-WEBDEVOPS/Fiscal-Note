@@ -1,0 +1,87 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+    Analytics
+</mat-toolbar>
+  
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+    alt="avatarimg"
+      class="avatar mat-elevation-z8"
+      src="assets/avathor.png"
+    />
+
+    <p class="designation" style="font-size:25px; color: white; margin-top: 10px;">Welcome</p>
+    <h5 class="name">{{Email}}</h5>
+  
+    <mat-divider></mat-divider>
+        
+    <button mat-button class="menu-button"  >
+      <mat-icon>analytics</mat-icon>
+      <span>Analytics</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/create"  >
+      <mat-icon>create</mat-icon>
+      <span>create</span>
+    </button>
+     
+    <button mat-button class="menu-button" routerLink="/read"  >
+      <mat-icon>book</mat-icon>
+      <span>Read</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/printpage" (click)="printx()">
+      <mat-icon>print</mat-icon>
+      <span>Print</span>
+    </button>
+  
+    <mat-divider></mat-divider>
+  
+    <button mat-button class="menu-button" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Log out</span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8" >
+      <section id="Analytics">
+       <div class="container">
+          <div class="card">
+            <p>Total Amount Given</p><br/>
+            <h1>{{this.service.totalAmount | currency : "INR" }}/-</h1>
+          </div>
+
+          <div class="card">
+            <p>Currently Payers</p><br/>
+            <h1 style="color: #34c1e4;">{{this.service.totalPayees  }}</h1>
+          </div>
+         
+       
+          <div class="card">
+            <p>Total profit</p><br/>
+            <h1 style="color: #31b10a;">{{this.service.totalprofit | currency : "INR" }}/-</h1>
+          </div>
+
+          <div class="card">
+            <p>Total Balance From Payees</p><br/>
+            <h1 >{{this.service.totalBalance | currency : "INR"}}
+            </h1>
+          </div> 
+      
+          <div class="card">
+            <p>Total Future Amount</p><br/>
+            <h1 style="color: #31b10a;">{{this.service.totalfinalamt | currency : "INR" }}/-</h1>
+          </div>    
+        </div>  
+             
+      </section>
+
+      
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

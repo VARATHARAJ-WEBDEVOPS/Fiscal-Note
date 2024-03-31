@@ -1,0 +1,13 @@
+<h2>Payee Details</h2>
+<p>Name: {{ data.formValues.employee_name}}</p>
+<p>Phone: {{ data.formValues.phone}}</p>
+<p>Address: {{ data.formValues.address}}</p>
+<mat-divider></mat-divider>
+<h1  *ngIf="!hideElements" align="center" style="color: red; font-weight: bold;margin-top: 10px;">{{amtinhand}}</h1>
+<h1 *ngIf="hideElements" align="center" style="color: red; font-weight: bold;margin-top: 10px;">₹ {{amtinhand}}/-</h1>
+<p *ngIf="hideElements" align="center">Check that the recipient has handed over the above amount</p>
+<mat-divider></mat-divider>
+<div style="justify-content: center; display: flex; width: 100%;">
+<button mat-raised-button color="warn" (click)="onClose()" style="margin-top: 10px; margin-right: 10px;">Close</button>
+<button *ngIf="hideElements" mat-raised-button color="primary" (click)="clicked()" style="margin-top: 10px;">Paid</button>
+</div>

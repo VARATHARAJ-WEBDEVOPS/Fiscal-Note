@@ -1,0 +1,61 @@
+<div class="login">
+    <div class="nav">
+    </div>
+    <div class="right" style="order: 1;">
+      <div class="topic">
+      <h1>Log in to FiscalNote</h1>
+      </div>
+      <div class="otherway">
+      <div class="google" (click)="notyet()">
+        <img src="assets/google.png" alt="google" />
+        <label>Log in with Google</label>
+      </div>
+      <div class="google" (click)="notyet()">
+        <img src="assets/apple.png" alt="google" />
+        <label>Log in with Apple</label>
+      </div>
+      </div>
+<div class="line">      
+      <hr><span>Or with email</span><hr> 
+      </div>
+        <div class="form">
+            <form 
+            #myForm="ngForm" 
+            (ngSubmit)="submitForm(myForm)">
+        
+              
+<div class="input">
+              <input 
+              type="email" 
+              name="email" 
+              placeholder="Email  example@gmail.com"
+              [(ngModel)]="email"
+              ngModel required><br/><br/>
+
+              <input 
+              type="password" 
+              name="password"
+              placeholder="password"
+              [(ngModel)]="password"
+              ngModel required>
+              
+              </div>
+              <br/>
+                  <div class="forgot">
+                    <span  (click)="notyet()">Forgot Password?</span>
+                  </div><br/>
+            
+            <button type="submit"> Log in </button>
+            <br/>
+            </form>
+       </div>
+    </div>
+    <div class="left" style="order: 2;">
+      <div>
+        <label>"An investment in</label>
+        <label>knowledge pay the best</label>
+        <label>interest"</label>
+              
+        <p> - Benjaman Franklin </p></div>
+    </div>
+</div>

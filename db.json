@@ -1,0 +1,84 @@
+{
+  "user": [
+    {
+      "name": "RR sir",
+      "phone": ".87787555",
+      "address": "Thirumangalam",
+      "date": "2023-03-14",
+      "amount": "1001",
+      "id": 6
+    },
+    {
+      "name": "Nanthasiva",
+      "phone": "445474",
+      "address": "Villapuram",
+      "date": "2023-03-14",
+      "amount": "100000",
+      "id": 7
+    },
+    {
+      "name": "Agnee vasanth",
+      "phone": "09360733323",
+      "address": "thirumangalam,madurai",
+      "date": "2023-03-14",
+      "amount": "3000",
+      "id": 9
+    },
+    {
+      "name": "Buvaneshvar",
+      "phone": "57577773457",
+      "address": "fsdfdsdsfsgsg",
+      "date": "2023-03-14",
+      "amount": "1000",
+      "id": 10
+    },
+    {
+      "name": "Dhanush",
+      "phone": "4793646763567657",
+      "address": "chennai",
+      "date": "2023-03-14",
+      "amount": "70000",
+      "id": 11
+    },
+    {
+      "name": "Eswar",
+      "phone": "5354563254654",
+      "address": "sdfsffsdfhdssfk",
+      "date": "2023-03-14",
+      "amount": "100000",
+      "id": 12
+    },
+    {
+      "name": "Fasil",
+      "phone": "755545521",
+      "address": "Thirumangalam",
+      "date": "2023-03-14",
+      "amount": "50000",
+      "id": 13
+    },
+    {
+      "name": "Gopi",
+      "phone": "7754646622",
+      "address": "Maikudi",
+      "date": "2023-03-14",
+      "amount": "10000",
+      "id": 15
+    },
+    {
+      "name": "Agnee vasanth",
+      "phone": "09360733323",
+      "address": "thirumangalam,madurai",
+      "date": "2023-03-14",
+      "amount": "5001",
+      "id": 16
+    },
+    {
+      "name": "Kalyana Pirakash",
+      "phone": "7955662",
+      "address": "Thirumangalam",
+      "date": "2023-03-15",
+      "amount": "70000",
+      "id": 18
+    }
+  ]
+}

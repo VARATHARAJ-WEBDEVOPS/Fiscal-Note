@@ -1,0 +1,68 @@
+<section>
+  <h3>
+  <b>Date : </b>{{today | date : 'dd - MMMM - yyyy'}}<br/>
+  Analytics <br/></h3>
+<table>
+  <caption>Analytics</caption>
+  <thead>
+    <tr>      
+      <th>Total Amount Given</th>
+      <th>Currently Payers</th>
+      <th> Total profit</th>
+      <th>Total Balance From Payees</th>
+      <th> Total Future Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <td>{{this.service.totalAmount | currency : "INR" }}/-</td>
+    <td>{{this.service.totalPayees  }}</td>
+    <td> {{this.service.totalprofit | currency : "INR" }}/-</td>
+    <td>{{this.service.totalBalance | currency : "INR"}}</td>
+    <td> {{this.service.totalfinalamt | currency : "INR" }}/-</td>
+  </tbody>
+</table><br/><br/><h3>Overall View</h3>
+    <table>
+      <caption>Overall</caption>
+        <thead>
+          <tr>
+            <th>Persolnal Details</th>
+            <th>Time</th>
+            <th>Amount / Interest</th>
+            
+            <th>Balance</th>
+            <th>Future Amount</th>
+            
+          </tr>
+        </thead>
+        <tbody *ngFor="let employee of service.employees">
+         
+            <td><div style="font-weight: 700; ">
+                {{employee['employee_name' ] | uppercase}}<br/>
+               </div>
+               
+                 {{employee['phone']}}<br/>
+                 {{employee['address']}}</td>
+            
+            
+            <td> {{employee['date']  | date : 'dd - MMMM - yyyy'  }} <br/>
+                <b style="color: red;">Due</b>&nbsp; {{employee['duedate']  }} &nbsp;Months
+               </td>
+           
+            <td>
+                {{employee['amount'] | currency: 'INR' }} <br/>
+                {{employee['interest']}}<b style="color: red;">%</b>&nbsp; <p style="color: #31b10a;"><b>&#11105;</b>
+              {{employee['profit'] | currency : 'INR'}}</p></td>         
+          
+              <td>  <p style="color: red"><b>↓</b>
+             {{employee['balance'] | currency : 'INR'}}<br/>
+             (  {{employee['balanceMonth']}}) &nbsp; Month
+              </p></td>
+
+              <td style="text-align: right;"> {{employee['amtPerMonth'] | currency : 'INR'}}<br/>
+                &nbsp;{{employee['duedate']  }}<br/>
+               {{ employee['finalamt'] | currency : 'INR'}}
+            </td>
+
+        </tbody>
+      </table>
+</section>

@@ -1,0 +1,25 @@
+* {
+    font-family: sans-serif;
+}
+
+section{
+    width: 100;
+    height: auto;
+    justify-content: center;
+    margin: 2%;
+}
+
+table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+table{
+    width: 100%;
+}
+th{
+    padding: 15px;
+}
+th,td {
+    text-align: center;
+}
